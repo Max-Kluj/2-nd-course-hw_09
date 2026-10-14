@@ -1,0 +1,478 @@
+@import 'vars';
+
+$text-color: #202027;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+}
+
+a, input, button{
+    font-family: "Montserrat", sans-serif;
+}
+
+body{
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+}
+
+.center{
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
+}
+
+.header{
+    background-image: url(./img/header.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: $text-color;
+    box-sizing: border-box;
+    position: relative;
+
+    &__box{
+        padding-top: 196px;
+        padding-bottom: 246px;
+        max-width: 769px;
+    }
+
+    &__title{
+        font-size: 4rem;
+        font-weight: 700;
+        padding-bottom: 1.5rem;
+    }
+
+    &__subtitle{
+        font-size: 1.5rem;
+        font-weight: 400;
+        padding-bottom: 3rem;
+        max-width: 720px;
+    }
+
+    &__button{
+        background-color: $text-color;
+        border: 1px solid $text-color;
+        border-radius: 60px;
+        box-sizing: border-box;
+        padding: 16px 65px;
+        text-align: center;
+        font-weight: 600;
+        font-size: 1.5rem;
+        line-height: 100%;
+        color: #FFFFFF;
+        transition: all 1s;
+        cursor: pointer;
+    }
+
+    &__button:hover{
+        background-color: white;
+        color: #000000;
+    }
+
+    &__scrollbar{
+        background-image: url(./img/header_scrollbar.jpg);
+        background-repeat: repeat-x;
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 90px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        animation: scrollLeft 5s linear infinite;
+    }
+}
+
+@keyframes scrollLeft {
+    0% {
+        background-position: 0 center;
+    }
+    100% {
+        background-position: 100% center;
+    }
+    
+}
+
+.about-game{
+    background-image: url(./img/Game1-background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-sizing: border-box;
+
+    &__box{
+        padding-bottom: 50px;
+        padding-top: 94px;
+    }
+
+    &__title{
+        font-size: 4rem;
+        font-weight: 700;
+        padding-bottom: 1.5rem;
+        color: #FFFFFF;
+        
+    }
+
+    &__subtitle{
+        font-size: 1.5rem;
+        font-weight: 400;
+        padding-bottom: 4.5rem;
+        max-width: 788px;
+        color: #FFFFFF;
+    }
+}
+
+.about-game__content{
+    display: grid;
+    gap: 32px;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: start;
+    
+}
+
+.game__1 {
+    grid-column: 1;
+    grid-row: 1;
+    /* Низкая карточка */
+    height: 473px; /* Примерная высота */
+}
+
+.game__2 {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    /* Высокая карточка, занимает 2 строки */
+    height: 512px; /* Растягивается на всю высоту */
+    align-self: start;
+}
+
+.game__3 {
+    grid-column: 3;
+    grid-row: 1;
+    /* Низкая карточка */
+    height: 473px; /* Примерная высота */
+}
+
+.game__4 {
+    grid-column: 1;
+    grid-row: 2;
+    /* Высокая карточка, под первой */
+    height: 551px; /* Пропорционально выше 1-й */
+    align-self: end; /* Прижимаем к нижней границе */
+}
+
+.game__5 {
+    grid-column: 2;
+    grid-row: 2;
+    /* Высокая карточка, та же высота что и 2-я */
+    height: 512px;
+    align-self: end;
+}
+
+.game__6 {
+    grid-column: 3;
+    grid-row: 2;
+    /* Высокая карточка, под третьей */
+    height: 551px; /* Пропорционально выше 3-й */
+    align-self: end; /* Прижимаем к нижней границе */
+}
+
+.game{
+    // grid-column: span 4;
+    // overflow: hidden;
+    border-radius: 30px;
+    background-color: #FFFFFF;
+    transition: all 1s;
+    
+    &__img{
+    height: 314px;
+    width: 100%;
+    border-radius: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    }
+
+    &__img_1{
+        background-image: url(./img/product1.jpg);
+    }
+
+    &__img_2{
+        background-image: url(./img/product2.jpg);
+    }
+
+    &__img_3{
+        background-image: url(./img/product3.jpg);
+    }
+
+    &__img_4{
+        background-image: url(./img/product4.jpg);
+    }
+
+    &__img_5{
+        background-image: url(./img/product5.jpg);
+    }
+
+    &__img_6{
+        background-image: url(./img/product6.jpg);
+    }
+
+    &__text{
+        padding: 32px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        max-width: 314px;
+    }
+
+    &__number{
+        background-color: #F7F7F7;
+        border-radius: 52px;
+        font-size: 1rem;
+        color: $text-color;
+        font-weight: 500;
+        width: 108px;
+        line-height: 100%;
+        padding: 10px 16px;
+        white-space: nowrap;
+    }
+
+    &__name{
+        font-size: 2rem;
+        font-weight: 700;
+        color: $text-color;
+        width: 314px;
+    }
+
+    &__1:hover{
+        transform: scale(1.1);
+    }
+
+    &__2:hover{
+        transform: scale(1.1);
+    }
+
+    &__3:hover{
+        transform: scale(1.1);
+    }
+
+    &__4:hover{
+        transform: scale(1.1);
+    }
+
+    &__5:hover{
+        transform: scale(1.1);
+    }
+
+    &__6:hover{
+        transform: scale(1.1);
+    }
+
+//     &__1:hover{
+//         grid-column: 1;
+//         grid-row: 1/3;
+//         height: 551px;
+//         align-self: start;
+
+//         ~ .game__4 {
+//         grid-column: 1;
+//         grid-row: 2;
+//         height: 473px;
+//         // align-self: end;
+// }
+//     }
+
+//     &:hover {
+//         transform: scaleY(1.1);
+//         transform-origin: top center;
+        
+// }
+
+//     &:hover + .product {
+//         transform: scaleY(0.9);
+//         transform-origin: bottom center;
+//         }
+
+//     &:has(+ .product:hover) {
+//         transform: scaleY(0.92);
+//         transform-origin: bottom center;
+//     }
+}
+
+.games-mini{
+    background-image: url(./img/Games_mini-background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-sizing: border-box;
+
+    &__box{
+        padding-top: 46px;
+        padding-bottom: 144px;
+    }
+
+    &__title{
+        font-size: 4rem;
+        font-weight: 700;
+        padding-bottom: 4.5rem;
+        color: #FFFFFF;
+    }
+}
+
+.games-mini__content{
+    display: grid;
+    gap: 32px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+}
+
+.game-mini{
+    grid-column: span 12;
+    border-radius: 30px;
+    background-color: #FFFFFF;
+    display: grid;
+
+    grid-template-columns: repeat(12, 1fr);
+
+   
+    
+
+    &__title{
+        grid-column: span 6;
+        padding-top: 48px;
+        padding-right: 48px;
+        padding-left: 48px;
+        order: 1;
+        // grid-column: 1 / 7;
+    }
+
+    &__img{
+        grid-column: span 6;
+        order: 2;
+        // grid-column: 7 / 13;
+        height: 500px;
+        border-radius: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        box-sizing: border-box;
+
+    }
+    
+
+    &:nth-child(2n) &__title {
+        // grid-column: 7 / 13;
+        order: 2;
+    }
+
+    &:nth-child(2n) &__img {
+        // grid-column: 1 / 7;
+        order: 1;
+    }
+
+    
+
+    &__text{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding-bottom: 36px;
+    }
+
+    &__name{
+        font-size: 3rem;
+        font-weight: 700;
+    }
+
+    &__description{
+        font-size: 1.5rem;
+        font-weight: 400;
+        max-width: 457px;
+        line-height: 32px;
+    }
+
+    &__button{
+        background-color: $text-color;
+        border: 1px solid $text-color;
+        border-radius: 60px;
+        box-sizing: border-box;
+        padding: 16px 75px;
+        text-align: center;
+        font-weight: 600;
+        font-size: 1.5rem;
+        line-height: 100%;
+        color: #FFFFFF;
+        transition: all 1s;
+        cursor: pointer;
+    }
+
+        &__button:hover{
+            background-color: white;
+            color: #000000;
+        }
+
+    
+
+    &__img_1{
+        background-image: url(./img/product1.jpg);
+    }
+
+    &__img_2{
+        background-image: url(./img/product2.jpg);
+    }
+
+    &__img_3{
+        background-image: url(./img/product3.jpg);
+    }
+
+    &__img_4{
+        background-image: url(./img/product4.jpg);
+    }
+
+    &__img_5{
+        background-image: url(./img/product5.jpg);
+    }
+
+    &__img_6{
+        background-image: url(./img/product6.jpg);
+    }
+
+    
+}
+
+.footer{
+    background-color: #BDED35;
+
+    &__text{
+        font-size: 1.5rem;
+        font-weight: 600;
+        text-align: center;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
+
+@import 'tablet';
+@import 'mobile';
+
+
+
+
+
+
+
+
+
+
+
+
+

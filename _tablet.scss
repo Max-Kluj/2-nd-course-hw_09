@@ -1,0 +1,59 @@
+@media(min-width: 768px) and (max-width: 1024px) {
+    .center{
+        padding-left: calc(50% - 393px);
+        padding-right: calc(50% - 393px);
+    }
+
+    .about-game__content{
+    display: grid;
+    gap: 28px;
+    grid-template-columns: repeat(2, 1fr);
+    // align-items: start;
+    }
+
+    .game__1 {
+    grid-column: 1;
+    grid-row: 1;
+    /* Низкая карточка */
+    height: 512px; /* Примерная высота */
+}
+
+.game__2 {
+    grid-column: 2;
+    grid-row: 1;
+    /* Высокая карточка, занимает 2 строки */
+    height: 512px; /* Растягивается на всю высоту */
+    // align-self: start;
+}
+
+.game__3 {
+    grid-column: 1;
+    grid-row: 2;
+    /* Низкая карточка */
+    height: 512px; /* Примерная высота */
+}
+
+.game__4 {
+    grid-column: 2;
+    grid-row: 2;
+    /* Высокая карточка, под первой */
+    height: 512px; /* Пропорционально выше 1-й */
+    // align-self: end; /* Прижимаем к нижней границе */
+}
+
+.game__5 {
+    grid-column: 1;
+    grid-row: 3;
+    /* Высокая карточка, та же высота что и 2-я */
+    height: 512px;
+    // align-self: end;
+}
+
+.game__6 {
+    grid-column: 2;
+    grid-row: 3;
+    /* Высокая карточка, под третьей */
+    height: 512px; /* Пропорционально выше 3-й */
+    // align-self: end; /* Прижимаем к нижней границе */
+}
+}
