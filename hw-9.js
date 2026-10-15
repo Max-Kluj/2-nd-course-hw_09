@@ -1,5 +1,5 @@
 // Находим кнопку по id
-const button1 = document.getElementById('exercise-1');
+const button1 = document.querySelector('#exercise-1');
 
 // Добавляем обработчик события
 const textEx1 = document.querySelector('.text1');
@@ -31,7 +31,7 @@ button1.addEventListener('click', function() {
 }
 );
 
-const button2 = document.getElementById('exercise-2');
+const button2 = document.querySelector('#exercise-2');
 
 const textEx2 = document.querySelector('.text2');
 
@@ -45,7 +45,7 @@ button2.addEventListener('click', function() {
     
 });
 
-const button3 = document.getElementById('exercise-3');
+const button3 = document.querySelector('#exercise-3');
 
 button3.addEventListener('click', function() {
     
@@ -55,7 +55,7 @@ textEx3.textContent = 'Привет, мир!';
 });
 
 
-const button4 = document.getElementById('exercise-4');
+const button4 = document.querySelector('#exercise-4');
 
 button4.addEventListener('click', function() {
    
@@ -68,7 +68,7 @@ textEx4.forEach(description => {
 });    
 
 
-const button5 = document.getElementById('exercise-5');
+const button5 = document.querySelector('#exercise-5');
 
 button5.addEventListener('click', function() {
     
@@ -83,7 +83,7 @@ textEx5.forEach(description => {
 });
 
 
-const button6 = document.getElementById('exercise-6');
+const button6 = document.querySelector('#exercise-6');
 
 button6.addEventListener('click', function() {
 
@@ -98,7 +98,7 @@ button6.addEventListener('click', function() {
 });
 
 
-const button7 = document.getElementById('exercise-7');
+const button7 = document.querySelector('#exercise-7');
 
 button7.addEventListener('click', function() {
 
